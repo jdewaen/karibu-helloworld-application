@@ -30,6 +30,7 @@ import com.vaadin.flow.router.Route
 class MainView : KComposite() {
     private lateinit var nameField: TextField
     private lateinit var greetButton: Button
+    private lateinit var testComponent: TestComponent
 
     // The main view UI definition
     private val root = ui {
@@ -45,6 +46,8 @@ class MainView : KComposite() {
             greetButton = button("Say hello") {
                 setPrimary(); addClickShortcut(Key.ENTER)
             }
+
+            testComponent = TestComponent()
         }
     }
 
